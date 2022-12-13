@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Yemek_Poşeti.Models.CustomerModel>
+
+@{
+    ViewBag.Title = "CustomerListele";
+    Layout = "~/Views/Shared/_LayoutYonetici.cshtml";
+}
+
+<h2>Müşteri Listele</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CustomerEY")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CUserPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CUserMail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CUserAddress)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUserPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUserMail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUserAddress)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "CustomerEY", new {  id=item.CustomerID  }) |
+           
+            @Html.ActionLink("Delete", "Delete", new {  id=item.CustomerID  })
+        </td>
+    </tr>
+}
+
+</table>

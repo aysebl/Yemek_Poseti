@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Loading....</title>
+        <style>
+            body {
+                background-color: #000000;
+            }
+        </style>
+        <center>
+            <img src="~/LoadingTema/giphy.gif" style=" width:200px;height:200px;align-items:center;">
+            <p>
+                <h1 style="color:aqua;">
+
+                    Loading.....
+
+
+
+                </h1>
+
+            </p>
+
+
+        </center>
+    </head>
+    
+    <body>
+
+        <div id="loading">
+            <img src="loader.gif" alt="Yükleniyor..." />
+        </div>
+        <script>
+
+    window.addEventListener('giphy.gif', fg_load)
+
+    function fg_load() {
+        document.getElementById('LoadingTema').style.display = 'none'
+    }
+        </script>
+
+    </body>
+    </html>
+
+
+
+
